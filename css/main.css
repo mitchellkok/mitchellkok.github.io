@@ -89,6 +89,20 @@ section {
     text-align: center;
     font-size: 14px;
 }
+
+.icon {
+    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+    color: #f2f2f2;
+}
+
+.icon:hover {
+    color: #47D3E5 !important;
+}
+
+.icon:active {
+    background-color: rgba(71, 211, 229, 0.2);
+    color: #47D3E5 !important;
+}
   
 
 @media (max-width:767px) {
