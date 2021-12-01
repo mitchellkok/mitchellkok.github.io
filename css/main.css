@@ -17,10 +17,6 @@ html {
     box-sizing: inherit;
 }
 
-body {
-    background: #ffffff;
-}
-
 
 div {
     text-align: justify;
@@ -69,31 +65,53 @@ section {
 }
 
 .bottomnav {
+    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
     bottom: 0;
     overflow: hidden;
     color: #f2f2f2;
     background-color: #333;
     width:100%;
-    padding-top: 8vh;
-    padding-bottom: 5vh;
+
+    top: 83vh;
+    padding-top: 1.5vh;
+    padding-bottom: 2vh;
+}
+
+.bottomnav.fix {
+    position: fixed;
+}
+
+.bottomnav.rel {
     position: relative;
 }
 
 .bottomnav a {
+    color: #ACF; 
     text-align:center;
     font-size: 24px;
     padding: 2px;
 }
 
+.bottomnav a:hover {
+    color: #47D3E5 !important;
+}
+
+.bottomnav a:active {
+    background-color: rgba(71, 211, 229, 0.2);
+    color: #47D3E5 !important;
+}
+  
+
 .bottomnavtext {
     text-align: center;
     font-size: 14px;
+    margin-bottom: 0px;
 }
 
 .icon {
     transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
     color: #f2f2f2;
-    padding: 0 0.25rem 0 0.25rem;
+    padding: 1rem 0.25rem 0 0.25rem;
 }
 
 .icon:hover {
@@ -181,8 +199,19 @@ p {
     }
 
     p a.main {
+        transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
         color: inherit;
         text-decoration: none;
+    }
+
+    
+    p a.main:hover {
+        color: #47D3E5 !important;
+    }
+
+    p a.main:active {
+        background-color: rgba(71, 211, 229, 0.2);
+        color: #47D3E5 !important;
     }
 
     p.major {
@@ -264,7 +293,7 @@ p {
 /* Banner  */
 .banner {
     position: abnsolute;
-    top: 10vh;
+    top: 5vh;
     left: 0px;
     align-items: stretch;
     justify-content: flex-end;
@@ -422,7 +451,7 @@ p {
 /* Wrapper (style1) */
 
 .wrapper.style1 > .inner {
-    padding: 7rem 3.5rem 5rem 3.5rem ;
+    padding: 7rem 3.5rem 15rem 3.5rem ;
     margin: 0 auto;
     max-width: 100%;
     width: 64rem;
@@ -439,27 +468,19 @@ p {
 @media screen and (max-width: 1920px) {
 
     .wrapper.style1 > .inner {
-        padding: 5rem 2.5rem 3rem 2.5rem ;
+        padding: 5rem 2.5rem 4rem 2.5rem ;
     }
 
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 720px) {
 
     .wrapper.style1 > .inner {
-        padding: 4rem 4rem 2rem 4rem ;
+        padding: 3rem 2rem 4rem 2rem ;
     }
 
 }
 
-
-@media screen and (orientation: portrait) {
-
-    .wrapper.style1 > .inner {
-        padding: 3rem 2rem 1rem 2rem ;
-    }
-
-}
 
 /* Style1 */
 
