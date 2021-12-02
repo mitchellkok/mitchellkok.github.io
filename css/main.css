@@ -72,12 +72,12 @@ section {
     background-color: #333;
     width:100%;
 
-    top: 83vh;
     padding-top: 1.5vh;
     padding-bottom: 2vh;
 }
 
 .bottomnav.fix {
+    top: 83vh;
     position: fixed;
 }
 
