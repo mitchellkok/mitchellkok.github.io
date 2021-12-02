@@ -41,7 +41,7 @@ section {
 .with-background {
     z-index:3;
     display: block;
-    background-image: url("MerlionPark.jpg");
+    background-image: url("backgrounds/MerlionPark.jpg");
     background-size: 100vw;
     background-position: 50% 80%;
     height: 100vh;
@@ -223,7 +223,7 @@ h6 {
     }
 
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 400px) {
         h1 {
             font-size: 1rem;
         }
@@ -301,7 +301,7 @@ p {
 }
 
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 400px) {
 
     p.major {
         font-size: 0.75rem;
@@ -371,11 +371,6 @@ p {
         height: 85vh;
         border-radius: 0;
     }
-
-    @media screen and (max-width: 480px) {
-    
-    }
-
 
 
 /* Banner  */
@@ -518,7 +513,7 @@ p {
 
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width:400px) {
     .button{
         font-size: 0.4rem;
     }
