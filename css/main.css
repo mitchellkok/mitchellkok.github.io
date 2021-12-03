@@ -41,7 +41,7 @@ section {
 .with-background {
     z-index:3;
     display: block;
-    background-image: url("backgrounds/MerlionPark.jpg");
+    background-image: url("backgrounds/MerlionPark_4k.jpg");
     background-size: 100vw;
     background-position: 50% 80%;
 }
