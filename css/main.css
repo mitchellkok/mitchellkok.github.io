@@ -44,7 +44,6 @@ section {
     background-image: url("backgrounds/MerlionPark.jpg");
     background-size: 100vw;
     background-position: 50% 80%;
-    height: 100vh;
 }
 
     @media screen and (max-width: 150vh) {
@@ -60,6 +59,10 @@ section {
         }
 
     }
+
+.with-background.fix {
+    height: 83vh;
+}
 
 .logo {
     overflow: hidden;
@@ -95,8 +98,8 @@ section {
 }
 
 .bottomnav.fix {
-    top: 83vh;
-    position: fixed;
+    height: 17vh;
+    position: relative;
 }
 
 .bottomnav.rel {
