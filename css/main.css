@@ -43,7 +43,6 @@ section {
     display: block;
     background-image: url("backgrounds/MerlionPark_4k.jpg");
     background-size: 100vw;
-    background-position: 50% 80%;
 }
 
     @media screen and (max-width: 150vh) {
@@ -60,8 +59,14 @@ section {
 
     }
 
-.with-background.fix {
+.with-background.fit {
+    background-position: 50% 80%;
     height: 83vh;
+}
+
+.with-background.fix {
+    /* background-size: auto 100vh; */
+    background-attachment: fixed;
 }
 
 .logo {
@@ -544,10 +549,16 @@ p {
 /* Wrapper (style1) */
 
 .wrapper.style1 > .inner {
-    padding: 7rem 3.5rem 15rem 3.5rem ;
+    position: relative;
     margin: 0 auto;
     max-width: 100%;
-    width: 64rem;
+    width: 70vw;
+
+    background-color: #ffffff;
+    opacity: 95%;
+    border-radius: 50px;
+    /* border-top-right-radius: 50px;
+    border-top-left-radius: 50px; */
 }
 
     .wrapper.style1 > .inner.medium {
@@ -561,7 +572,8 @@ p {
 @media screen and (max-width: 1920px) {
 
     .wrapper.style1 > .inner {
-        padding: 5rem 2.5rem 4rem 2.5rem ;
+        top: 2.5rem;
+        padding: 4rem 4rem 7rem 4rem ;
     }
 
 }
@@ -569,7 +581,7 @@ p {
 @media screen and (max-width: 720px) {
 
     .wrapper.style1 > .inner {
-        padding: 3rem 2rem 4rem 2rem ;
+        padding: 3rem 2rem 5rem 2rem ;
     }
 
 }
