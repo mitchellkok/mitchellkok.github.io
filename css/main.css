@@ -66,6 +66,7 @@ section {
 
 .with-background.fix {
     /* background-size: auto 100vh; */
+    background-position: 50% 50%;
     background-attachment: fixed;
 }
 
@@ -578,9 +579,10 @@ p {
 
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (orientation: portrait) {
 
     .wrapper.style1 > .inner {
+        width: 100vw;
         padding: 3rem 2rem 5rem 2rem ;
     }
 
