@@ -141,6 +141,12 @@ section {
     padding: 1rem 0.25rem 0 0.25rem;
 }
 
+.icon.dark {
+    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+    color: #555;
+    padding: 1rem 0.25rem 0 0.25rem;
+}
+
 .icon:hover {
     color: #47D3E5 !important;
 }
@@ -334,6 +340,9 @@ p {
 
 }
 
+.underline {
+    text-decoration: underline;
+}
 
 .text-align-center {
     text-align: center;
@@ -352,9 +361,9 @@ p {
 }
 
 .top-border {
-    margin-top: 3.5rem;
-    padding-top: 3.5rem;
-    padding-bottom: 2.5rem;
+    /* margin-top: 3.5rem; */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     border-style: solid;
     border-color: #555;
     border-top-width: 1px;
@@ -574,7 +583,7 @@ p {
 
     .wrapper.style1 > .inner {
         top: 2.5rem;
-        padding: 4rem 4rem 7rem 4rem ;
+        padding: 4rem 4rem 4rem 4rem ;
     }
 
 }
@@ -638,3 +647,14 @@ p {
 
     }
 
+
+.items.style2 {
+    text-align: left;
+    margin: 2rem auto 0;
+}
+
+    @media screen and (max-width: 480px) {
+        .items.style2.medium > * {
+            width: 80%;
+        }
+    }
