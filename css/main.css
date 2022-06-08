@@ -859,11 +859,9 @@ p {
             width: 100%;
             height: inherit;
             border-radius: 0;
-           
         }
 
             .gallery.style1 article .image img {
-                object-position: center;
                 object-fit: cover;
                 display: block;
                 width: 100%;
@@ -871,11 +869,15 @@ p {
                 border-radius: 0;
             }
 
-            .gallery.style1 article.position-bottom .image img {
+            .gallery.style1 article .image .position-bottom {
                 object-position: bottom;
             }
 
-            .gallery.style1 article.position-top .image img  {
+            .gallery.style1 article .image .position-center {
+                object-position: center;
+            }
+
+            .gallery.style1 article .image .position-top {
                 object-position: top;
             }
 
