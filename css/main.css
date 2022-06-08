@@ -381,7 +381,6 @@ p {
 .image {
     border-radius: 0;
     width: 100%;
-    z-index:3;
 }
 
     .image img {
@@ -885,7 +884,6 @@ p {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            pointer-events: none;
             transition: opacity 0.2s ease-in-out;
             position: absolute;
             top: 0;
@@ -895,7 +893,6 @@ p {
             background-color: rgba(0, 0, 0, 0.5);
             opacity: 0;
             padding: 2rem;
-            z-index: 1;
             font-size: 0.8rem;
         }
 
