@@ -381,6 +381,7 @@ p {
 .image {
     border-radius: 0;
     width: 100%;
+    z-index: 3;
 }
 
     .image img {
@@ -397,7 +398,6 @@ p {
 
 /* Banner  */
 .banner {
-    position: absolute;
     top: 5vh;
     left: 0px;
     align-items: stretch;
