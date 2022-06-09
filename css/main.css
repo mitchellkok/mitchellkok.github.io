@@ -395,6 +395,16 @@ p {
         pointer-events: none;
     }
 
+    .lightbox img {
+        object-fit: cover;
+        object-position: center;
+        display: block;
+        left: 0;
+        width: 100%;
+        height: inherit;
+        border-radius: 0;
+    }
+
 
 /* Banner  */
 .banner {
@@ -921,18 +931,6 @@ p {
 
     }
 
-        @media screen and (max-width: 1280px) {
-
-        .gallery.style1 article {
-            width: 33.33333%;
-        }
-
-            .gallery.style1 article .caption {
-                padding: 1.5rem;
-            }
-
-    }
-
     @media screen and  (orientation: portrait) {
 
         .gallery.style1 article {
@@ -948,7 +946,7 @@ p {
 
     }
 
-    body {
+    .lightbox {
         font-family: Verdana, sans-serif;
         margin: 0;
       }
@@ -957,23 +955,19 @@ p {
         box-sizing: border-box;
       }
       
-      .row > .column {
-        padding: 0 8px;
-      }
-      
-      .row:after {
+      .lightbox .row:after {
         content: "";
         display: table;
         clear: both;
       }
       
-      .column {
+      .lightbox .column {
         float: left;
         width: 25%;
       }
       
       /* The Modal (background) */
-      .modal {
+      .lightbox .modal {
         display: none;
         position: fixed;
         z-index: 1;
@@ -987,7 +981,7 @@ p {
       }
       
       /* Modal Content */
-      .modal-content {
+      .lightbox .modal-content {
         position: relative;
         background-color: #fefefe;
         margin: auto;
@@ -997,7 +991,7 @@ p {
       }
       
       /* The Close Button */
-      .close {
+      .lightbox .close {
         color: white;
         position: absolute;
         top: 10px;
@@ -1006,14 +1000,13 @@ p {
         font-weight: bold;
       }
       
-      .close:hover,
-      .close:focus {
+      .lightbox .close:hover, .lightbox .close:focus {
         color: #999;
         text-decoration: none;
         cursor: pointer;
       }
       
-      .mySlides {
+      .lightbox .mySlides {
         display: none;
       }
       
@@ -1022,8 +1015,7 @@ p {
       }
       
       /* Next & previous buttons */
-      .prev,
-      .next {
+      .lightbox .prev, .lightbox .next {
         cursor: pointer;
         position: absolute;
         top: 50%;
@@ -1040,19 +1032,18 @@ p {
       }
       
       /* Position the "next button" to the right */
-      .next {
+      .lightbox .next {
         right: 0;
         border-radius: 3px 0 0 3px;
       }
       
       /* On hover, add a black background color with a little bit see-through */
-      .prev:hover,
-      .next:hover {
+      .lightbox .prev:hover, .lightbox .next:hover {
         background-color: rgba(0, 0, 0, 0.8);
       }
       
       /* Number text (1/3 etc) */
-      .numbertext {
+      .lightbox .numbertext {
         color: #f2f2f2;
         font-size: 12px;
         padding: 8px 12px;
@@ -1060,30 +1051,29 @@ p {
         top: 0;
       }
       
-      img {
+      .lightbox img {
         margin-bottom: -4px;
       }
       
-      .caption-container {
+      .lightbox .caption-container {
         text-align: center;
         background-color: black;
         padding: 2px 16px;
         color: white;
       }
       
-      .demo {
+      .lightbox .demo {
         opacity: 0.6;
       }
       
-      .active,
-      .demo:hover {
+      .lightbox .active, .lightbox .demo:hover {
         opacity: 1;
       }
       
-      img.hover-shadow {
+      .lightbox img.hover-shadow {
         transition: 0.3s;
       }
       
-      .hover-shadow:hover {
+      .lightbox .hover-shadow:hover {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       }
