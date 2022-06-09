@@ -936,13 +936,13 @@ p {
 
         .gallery.style1 article {
             width: 100%;
-            padding: 1rem;
+            /* padding: 1rem; */
         }
 
             .gallery.style1 article .caption {
-                width: 91.5vw;
+                width: 100vw;
                 padding: 1rem;
-                margin: 1rem;
+                /* margin: 1rem; */
             }
 
     }
