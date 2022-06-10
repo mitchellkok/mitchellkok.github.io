@@ -955,33 +955,33 @@ p {
         width: 25%;
     }
 
-    .lightbox article .caption {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        transition: opacity 0.2s ease-in-out;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        opacity: 0;
-        padding: 2rem;
-        font-size: 0.8rem;
-        z-index: 1;
-    }
-
-        .lightbox article .caption h2, .lightbox article .caption h3, .lightbox article .caption h4, .lightbox article .caption h5, .lightbox article .caption h6 {
-            font-size: 1.25rem;
-            margin-bottom: 0.25rem;
+        .lightbox article .caption {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            transition: opacity 0.2s ease-in-out;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            padding: 2rem;
+            font-size: 0.8rem;
+            z-index: 1;
         }
 
-        .lightbox article:hover .caption {
-            opacity: 1;
-        }
+            .lightbox article .caption h2, .lightbox article .caption h3, .lightbox article .caption h4, .lightbox article .caption h5, .lightbox article .caption h6 {
+                font-size: 1.25rem;
+                margin-bottom: 0.25rem;
+            }
+
+            .lightbox article:hover .caption {
+                opacity: 1;
+            }
 
     @media screen and (max-width: 1280px) {
 
@@ -1004,7 +1004,7 @@ p {
         display: none;
         position: fixed;
         z-index: 11;
-        padding-top: 10vh;
+        /* padding-top: 10vh; */
         left: 0;
         top: 0;
         width: 100%;
@@ -1014,9 +1014,8 @@ p {
     }
     
     /* Modal Content */
-    .lightbox.modal-content {
-        position: relative;
-        background-color: #fefefe;
+    .lightbox .modal-content {
+        align-items: center;
         margin: auto;
         padding: 0;
         width: 90%;
@@ -1101,8 +1100,21 @@ p {
         padding: 2px 16px;
         color: white;
     }
+
+    .lightbox .demos {
+        align-items: center;
+        display: flex;
+        height: 20%;
+        /* flex-wrap: wrap;  */
+        /* position: relative; */
+    }
     
-    .lightbox.demo {
+    .lightbox .demo {
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        height: 100%; 
+        width: 100%;
         opacity: 0.6;
     }
     
