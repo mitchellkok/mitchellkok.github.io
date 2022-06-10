@@ -13,7 +13,7 @@
 	<body>
 		<h2 style="text-align:center">Lightbox</h2>
 		<div id="wrapper" class="divided">
-			<div class="gallery style1">
+			<!-- <div class="gallery style1">
 
 				<article>
 					<div class="image">
@@ -44,7 +44,7 @@
 				</article>
 
 				<article>
-					<div href="#" class="image">
+					<div class="image">
 						<img src="https://drive.google.com/uc?export=view&id=1LEDjaaEcf8aSwscOQonsuPAKOd9ncjkV" alt=""  class="position-center"/>
 					</div>
 					<div class="caption">
@@ -55,70 +55,84 @@
 						</section>
 					</div>
 				</article>
-		</div>
+		</div> -->
 
-		<!-- <div class="gallery style1"> -->
-		<div class="lightbox row">
-			<div class="lightbox column">
-				<img src="https://drive.google.com/uc?export=view&id=1-8scv4jfljXGRmlYt6u2DF4OKiDN4M9l" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-			</div>
-			<div class="lightbox column">
-				<img src="https://drive.google.com/uc?export=view&id=17AXP7zXc6Gj2F49kEnJcxNKtq75rEVkD" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
-			<div class="lightbox column">
-				<img src="https://drive.google.com/uc?export=view&id=1gK1QrWsjDqeXNPQ9bQDXoAoLdaaOB-I8" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
-			</div>
-			<div class="lightbox column">
-				<img src="https://drive.google.com/uc?export=view&id=1mDlxALLnZ-7owiCnw3wPsdH6sMHJ10rO" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
-			</div>
-		</div>
-
-		<div id="myModal" class="lightbox modal">
-			<span class="close cursor" onclick="closeModal()">&times;</span>
-			<div class="modal-content">
-
-				<div class="lightbox mySlides">
-					<div class="numbertext">1 / 4</div>
-					<img src="https://drive.google.com/uc?export=view&id=1-8scv4jfljXGRmlYt6u2DF4OKiDN4M9l" style="width:100%">
+		<div class="lightbox">
+	
+			<article>
+				<div class="image">
+					<img src="https://drive.google.com/uc?export=view&id=1-8scv4jfljXGRmlYt6u2DF4OKiDN4M9l" alt>
 				</div>
+				<div onclick="openModal();currentSlide(1)"  class="caption"></div>
+			</article>
 
-				<div class="lightbox mySlides">
-					<div class="numbertext">2 / 4</div>
-					<img src="https://drive.google.com/uc?export=view&id=17AXP7zXc6Gj2F49kEnJcxNKtq75rEVkD" style="width:100%">
+			<article>
+				<div class="image">
+					<img src="https://drive.google.com/uc?export=view&id=17AXP7zXc6Gj2F49kEnJcxNKtq75rEVkD" alt>
 				</div>
+				<div onclick="openModal();currentSlide(2)"  class="caption"></div>
+			</article>
+			<article>
+				<div class="image">
+					<img src="https://drive.google.com/uc?export=view&id=1gK1QrWsjDqeXNPQ9bQDXoAoLdaaOB-I8" alt>
+				</div>
+				<div onclick="openModal();currentSlide(3)"  class="caption"></div>
+			</article>
+			<article>
+				<div class="image hover-shadow">
+					<img src="https://drive.google.com/uc?export=view&id=1mDlxALLnZ-7owiCnw3wPsdH6sMHJ10rO" alt>
+				</div>
+				<div onclick="openModal();currentSlide(4)"  class="caption"></div>
+			</article>
+		
 
-				<div class="lightbox mySlides">
-					<div class="numbertext">3 / 4</div>
-					<img src="https://drive.google.com/uc?export=view&id=1gK1QrWsjDqeXNPQ9bQDXoAoLdaaOB-I8" style="width:100%">
-				</div>
-				
-				<div class="lightbox mySlides">
-					<div class="numbertext">4 / 4</div>
-					<img src="https://drive.google.com/uc?export=view&id=1mDlxALLnZ-7owiCnw3wPsdH6sMHJ10rO" style="width:100%">
-				</div>
+			<div id="myModal" class="modal">
+				<span class="close" onclick="closeModal()">&times;</span>
+				<div class="modal-content">
+
+					<div class="mySlides">
+						<div class="numbertext">1 / 4</div>
+						<img src="https://drive.google.com/uc?export=view&id=1-8scv4jfljXGRmlYt6u2DF4OKiDN4M9l">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext">2 / 4</div>
+						<img src="https://drive.google.com/uc?export=view&id=17AXP7zXc6Gj2F49kEnJcxNKtq75rEVkD">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext">3 / 4</div>
+						<img src="https://drive.google.com/uc?export=view&id=1gK1QrWsjDqeXNPQ9bQDXoAoLdaaOB-I8">
+					</div>
 					
-				<a class="lightbox prev" onclick="plusSlides(-1)">&#10094;</a>
-				<a class="lightbox next" onclick="plusSlides(1)">&#10095;</a>
+					<div class="mySlides">
+						<div class="numbertext">4 / 4</div>
+						<img src="https://drive.google.com/uc?export=view&id=1mDlxALLnZ-7owiCnw3wPsdH6sMHJ10rO">
+					</div>
+						
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-				<div class="lightbox caption-container">
-					<p id="caption"></p>
-				</div>
+					<div class="lightbox caption-container">
+						<p id="caption"></p>
+					</div>
 
 
-				<div class="lightbox column">
-					<img class="lightbox demo cursor" src="https://drive.google.com/uc?export=view&id=1-8scv4jfljXGRmlYt6u2DF4OKiDN4M9l" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
-				</div>
-				<div class="lightbox column">
-					<img class="lightbox demo cursor" src="https://drive.google.com/uc?export=view&id=17AXP7zXc6Gj2F49kEnJcxNKtq75rEVkD" style="width:100%" onclick="currentSlide(2)" alt="Snow">
-				</div>
-				<div class="lightbox column">
-					<img class="lightbox demo cursor" src="https://drive.google.com/uc?export=view&id=1gK1QrWsjDqeXNPQ9bQDXoAoLdaaOB-I8" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-				</div>
-				<div class="lightbox column">
-					<img class="lightbox demo cursor" src="https://drive.google.com/uc?export=view&id=1mDlxALLnZ-7owiCnw3wPsdH6sMHJ10rO" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+					<div class="column">
+						<img class="demo" src="https://drive.google.com/uc?export=view&id=1-8scv4jfljXGRmlYt6u2DF4OKiDN4M9l" onclick="currentSlide(1)" alt="Nature and sunrise">
+					</div>
+					<div class="column">
+						<img class="demo" src="https://drive.google.com/uc?export=view&id=17AXP7zXc6Gj2F49kEnJcxNKtq75rEVkD" onclick="currentSlide(2)" alt="Snow">
+					</div>
+					<div class="column">
+						<img class="demo" src="https://drive.google.com/uc?export=view&id=1gK1QrWsjDqeXNPQ9bQDXoAoLdaaOB-I8" onclick="currentSlide(3)" alt="Mountains and fjords">
+					</div>
+					<div class="column">
+						<img class="demo" src="https://drive.google.com/uc?export=view&id=1mDlxALLnZ-7owiCnw3wPsdH6sMHJ10rO" onclick="currentSlide(4)" alt="Northern Lights">
+					</div>
 				</div>
 			</div>
 		</div>
-		<!-- </div> -->
 
 
 		<script>
