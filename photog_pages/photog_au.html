@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+	<head>
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="stylesheet" href="../css/main.css" />
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+			<title>Australia</title>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+		  </head>
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	</head>
+	<body>
+		<section class="wrapper style1 ">
+			<div class="innersmall text-align-center">
+				<h1>
+                    Australia
+                </h1>
+				<p>
+					Australia
+					<br/>
+					More photos at <a href="https://www.instagram.com/thetakers_photos/" target="_blank" class="main">@thetakers_photos</a>.
+					<section> 
+						<a href="../photog.html" class="button equal-margin fixed-width">Back</a>
+					</section>
+				</p>
+			</div>
+
+		<section></section>
+		<div id="wrapper" class="divided">
+
+		<div class="lightbox">
+	
+			<article>
+				<div class="image">
+					<img src="https://drive.google.com/uc?export=view&id=1dPZY2CfK-asGrSBn0JplZn5LOoMACz7a" alt="CHINA">
+				</div>
+				<div onclick="openModal();currentSlide(1)"  class="caption"></div>
+			</article>
+
+			<article>
+				<div class="image">
+					<img src="https://drive.google.com/uc?export=view&id=1eurZsCBo43fQ8LjdlZOPb8a-Hlz7cniP" alt="CHINA">
+				</div>
+				<div onclick="openModal();currentSlide(2)"  class="caption"></div>
+			</article>
+
+			<article>
+				<div class="image">
+					<img src="https://drive.google.com/uc?export=view&id=1633c05poLia9SPizWb3zxI2hMIGoRJoW" alt="CHINA">
+				</div>
+				<div onclick="openModal();currentSlide(3)"  class="caption"></div>
+			</article>
+
+			<article>
+				<div class="image">
+					<img src="https://drive.google.com/uc?export=view&id=1pvQxHFo5cWOIRnU5gOZ1VNAV9uOWa-8L" alt="CHINA">
+				</div>
+				<div onclick="openModal();currentSlide(4)"  class="caption"></div>
+			</article>
+
+			<article>
+				<div class="image">
+					<img src="https://drive.google.com/uc?export=view&id=1KyURfX8hbWTgxY5UM-m1vzOp75pG7_uV" alt="CHINA">
+				</div>
+				<div onclick="openModal();currentSlide(5)"  class="caption"></div>
+			</article>
+
+			<article>
+				<div class="image">
+					<img src="https://drive.google.com/uc?export=view&id=1FVMKlkJYk-SBwnjdV-RXyR019zKLPeif" alt="CHINA">
+				</div>
+				<div onclick="openModal();currentSlide(6)"  class="caption"></div>
+			</article>
+
+			<article>
+				<div class="image">
+					<img src="https://drive.google.com/uc?export=view&id=1DRnaXJAyD8eI92qqB4t5ba_h8WkSnC8t" alt="CHINA">
+				</div>
+				<div onclick="openModal();currentSlide(7)"  class="caption"></div>
+			</article>
+
+			<div id="myModal" class="modal">
+				<div class="numbertext" id="numbertext">4 / 4</div>
+				<a class="close" onclick="closeModal()">&times;</a>
+				<div class="modal-content">
+					<div class="caption-container"></div>
+					
+					<div class="mySlides title=CapeToCape (7).jpg">
+						<img src="https://drive.google.com/uc?export=view&id=1dPZY2CfK-asGrSBn0JplZn5LOoMACz7a">
+					</div>
+					<div class="mySlides title=CapeToCape (6).jpg">
+						<img src="https://drive.google.com/uc?export=view&id=1eurZsCBo43fQ8LjdlZOPb8a-Hlz7cniP">
+					</div>
+					<div class="mySlides title=CapeToCape (5).jpg">
+						<img src="https://drive.google.com/uc?export=view&id=1633c05poLia9SPizWb3zxI2hMIGoRJoW">
+					</div>
+					<div class="mySlides title=CapeToCape (4).jpg">
+						<img src="https://drive.google.com/uc?export=view&id=1pvQxHFo5cWOIRnU5gOZ1VNAV9uOWa-8L">
+					</div>
+					<div class="mySlides title=CapeToCape (3).jpg">
+						<img src="https://drive.google.com/uc?export=view&id=1KyURfX8hbWTgxY5UM-m1vzOp75pG7_uV">
+					</div>
+					<div class="mySlides title=CapeToCape (2).jpg">
+						<img src="https://drive.google.com/uc?export=view&id=1FVMKlkJYk-SBwnjdV-RXyR019zKLPeif">
+					</div>
+					<div class="mySlides title=CapeToCape (1).jpg">
+						<img src="https://drive.google.com/uc?export=view&id=1DRnaXJAyD8eI92qqB4t5ba_h8WkSnC8t">
+					</div>
+				
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+					<div class="caption-container">
+						<p id="caption"></p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+
+		<script>
+			function openModal() {
+				document.getElementById("myModal").style.display = "block";
+			}
+
+			function closeModal() {
+				document.getElementById("myModal").style.display = "none";
+			}
+
+			var slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+				showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+				showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+				var i;
+				var slides = document.getElementsByClassName("mySlides");
+				var captionText = document.getElementById("caption");
+				var numberText = document.getElementById("numbertext");
+				if (n > slides.length) {
+					slideIndex = 1
+				}
+				if (n < 1) {
+					slideIndex = slides.length
+				}
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";
+				}
+				slides[slideIndex-1].style.display = "block";
+				captionText.innerHTML = slides[slideIndex-1].title;
+
+				let numberString = slideIndex.toString() + "/" + slides.length.toString()
+				numberText.innerHTML = numberString;
+			}
+
+			$(document).ready(function(){
+				$('#myLink').click(function(){
+					openModal();
+				});
+			});
+		</script>
+		
+	</body>
+
+</html>
