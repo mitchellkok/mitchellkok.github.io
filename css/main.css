@@ -1103,6 +1103,7 @@ p {
         padding-left: 15vh;
         padding-right: 15vh;
         object-fit: contain;
+        pointer-events: none;
     }
 
     .lightbox .caption-container {
