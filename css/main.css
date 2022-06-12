@@ -178,11 +178,14 @@ section {
 }
 
 /* Text */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .helvetica {
     font-weight: 300;
     font-family: "Source Sans Pro", Helvetica, sans-serif;
     line-height: 1.375;
     letter-spacing: -0.05em;
+}
+
+h1, h2, h3, h4, h5, h6 {
     margin: 1rem 0 1rem 0;
     color: #000000;
 }
@@ -190,6 +193,11 @@ h1, h2, h3, h4, h5, h6 {
     h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
         color: inherit;
         text-decoration: none;
+    }
+
+    h1 .marginless, h2.marginless, h3.marginless, 
+    h4.marginless, h5.marginless, h6 .marginless {
+        margin: 0;
     }
 
 h1 {
@@ -570,30 +578,30 @@ p {
     top: 1px;
 
     position: relative;
-    margin: 0 auto;
+    margin: 0rem auto;
     max-width: 100%;
     width: 70vw;
 
-    padding: 3rem 4rem 3.5rem 4rem ;
+    padding: 2rem 4rem 2rem 4rem ;
 
     background-color: #ffffff;
     opacity: 95%;
 }
 
 .wrapper.style1 > .innersmall {
-    padding: 1rem 4rem 1rem 4rem ;
+    padding: 1rem 4rem 0rem 4rem ;
 }
 
 @media screen and (orientation: portrait) {
 
     .wrapper.style1 > .inner {
         width: 100vw;
-        padding: 3rem 2rem 3.5rem 2rem ;
+        padding: 3rem 2rem 2rem 2rem ;
     }
 
     .wrapper.style1 > .inner {
         width: 100vw;
-        padding: 1rem 2rem 1rem 2rem ;
+        padding: 1rem 2rem 0rem 2rem ;
     }
 
 }
@@ -1133,5 +1141,43 @@ p {
         .lightbox .next  {
             right: 0;
         }
+    }
+
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    align-items: center;
+    margin-top: 1px;
+}
+
+    /* Style the buttons inside the tab */
+    .tab button {
+        width: 33.3333%;
+        margin-top: 1px;
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+        background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+        background-color: #f1f1f1;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        /* padding: 2rem; */
     }
     
