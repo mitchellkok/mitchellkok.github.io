@@ -717,7 +717,7 @@ p {
     flex-direction: row;
     justify-content: flex-end;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
     text-align: left;
     max-height: 55vh;
 }
@@ -733,8 +733,8 @@ p {
     }
 
     .items.style3 .image {
-        flex-grow: 0;
-        flex-shrink: 0;
+        flex-grow: 1;
+        flex-shrink: 1;
         width: 35%;
         border-radius: 0;
     }
@@ -752,11 +752,17 @@ p {
 
 
     @media screen and (max-width: 1280px) {
-
         .items.style3 .content {
-            padding: 3rem 4rem 3rem 4rem ;
+            padding: 2rem 3rem 2rem 3rem ;
+            max-height: inherit;
         }
 
+    }
+
+    @media screen and (max-width: 960px) {
+        .items.style3 {
+            max-height: 100vh;
+        }
     }
 
 
@@ -1148,14 +1154,20 @@ p {
 
 /* Style the tab */
 .tab {
-    overflow: hidden;
+    overflow:auto;
     align-items: center;
     margin-top: 1px;
+    height: auto;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
 }
 
     /* Style the buttons inside the tab */
-    .tab button {
-        width: 33.3333%;
+    .tab .tablinks {
+        display: table-cell;
+        width: 33.333333%;
+        height: 100%;
         margin-top: 1px;
         background-color: inherit;
         float: left;
@@ -1169,15 +1181,16 @@ p {
         padding: 14px 16px;
         transition: 0.3s;
         font-size: 17px;
+        text-align: center;
     }
 
     /* Change background color of buttons on hover */
-    .tab button:hover {
+    .tab .tablinks:hover {
         background-color: #ddd;
     }
 
     /* Create an active/current tablink class */
-    .tab button.active {
+    .tab .tablinks.active {
         background-color: #f1f1f1;
     }
 
