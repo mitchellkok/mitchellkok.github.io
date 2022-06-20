@@ -267,9 +267,9 @@ h6 {
 
 p {
     font-family: "Source Sans Pro", Helvetica, sans-serif;
-    margin: 0 0 2rem 0;
+    /* padding: 0 0 2rem 0; */
     display: block;
-    /* margin-block-start: 1em; */
+    margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
@@ -576,6 +576,10 @@ p {
 .wrapper {
     background-color: #FFFFFF;
 }
+
+    .wrapper.auto-overflow {
+        overflow: auto;
+    }
 
     .wrapper.style1 > .inner {
         top: 1px;
@@ -1157,6 +1161,7 @@ p {
     overflow:auto;
     align-items: center;
     margin-top: 1px;
+    margin-bottom: 1px;
     height: auto;
     display: table;
     table-layout: fixed;
@@ -1171,10 +1176,10 @@ p {
         margin-top: 1px;
         background-color: inherit;
         float: left;
-        border-top: none;
-        border-bottom: none;
-        border-left: 1px solid;
-        border-right: none;
+        /* border-top: none; */
+        /* border-bottom: none; */
+        border: 1px solid;
+        /* border-right: none; */
         border-color: #DDD;
         outline: none;
         cursor: pointer;
