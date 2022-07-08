@@ -1161,32 +1161,34 @@ p {
     overflow:auto;
     align-items: center;
     margin-top: 1px;
-    /* margin-bottom: 1px; */
-    height: auto;
-    display: table;
+    min-height: 10vh;
+    display: flex;
+    flex-direction:row;
+    align-items: stretch;
     table-layout: fixed;
     width: 100%;
 }
 
     /* Style the buttons inside the tab */
     .tab .tablinks {
-        display: table-cell;
+        display: table;
         width: 33.333333%;
-        height: 100%;
         margin-top: 1px;
         background-color: inherit;
         float: left;
-        /* border-top: none; */
-        /* border-bottom: none; */
-        border: 1px solid;
-        /* border-right: none; */
-        border-color: #DDD;
+        overflow: auto;
         outline: none;
         cursor: pointer;
         padding: 14px 16px;
         transition: 0.3s;
-        font-size: 17px;
+    }
+
+    .tab span {
+        display: table-cell;
+        vertical-align: middle;
+        line-height: normal;
         text-align: center;
+        font-size: 17px;
     }
 
     /* Change background color of buttons on hover */
