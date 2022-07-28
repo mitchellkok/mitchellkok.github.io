@@ -144,12 +144,11 @@ h1, h2, h3, h4, h5, h6, .helvetica {
     font-weight: 300;
     font-family: "Source Sans Pro", Helvetica, sans-serif;
     line-height: 1.375;
-    letter-spacing: -0.05em;
+    /* letter-spacing: -0.05em; */
 }
 
 h1, h2, h3, h4, h5, h6 {
     margin: 1rem 0 1rem 0;
-    color: #000000;
 }
 
     h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -163,11 +162,13 @@ h1, h2, h3, h4, h5, h6 {
     }
 
 h1 {
+    color: #000000;
     font-size: 3.5rem;
     line-height: 1.2;
 }
 
 h2 {
+    color: #000000;
     font-size: 2.25rem;
 }
 
@@ -573,7 +574,20 @@ p {
     }
 
     .wrapper.style1 > .innersmall {
-        padding: 1rem 4rem 0rem 4rem ;
+        color: #555;
+        padding: 1rem 20vw 1rem 20vw;
+    }
+
+    @media screen and (max-width:960px) {
+        .wrapper.style1 > .innersmall {
+            padding: 1rem 10vw 1rem 10vw;
+        }
+    }
+
+    @media screen and (max-width:640px) {
+        .wrapper.style1 > .innersmall {
+            padding: 3rem 2rem 2rem 2rem ;
+        }
     }
 
     @media screen and (orientation: portrait) {
@@ -709,13 +723,11 @@ p {
         flex-grow: 1;
         flex-shrink: 1;
         width: 75%;
-        /* max-width: 64rem; */
         margin: 0 auto;
     }
 
     .items.style3 .image {
         position: relative;
-        
         flex-grow: 1;
         flex-shrink: 1;
         width: 25%;
@@ -723,12 +735,13 @@ p {
     }
 
         .items.style3 .image img {
-            object-fit: cover;
-            object-position: bottom;
+            object-position: right center;
             display: block;
             top: 0;
             left: 0;
             width: 100%;
+            height: 100%;
+            object-fit: cover;
             position:absolute;
             overflow: hidden;
             border-radius: 0;
@@ -740,28 +753,11 @@ p {
             padding: 2rem 3rem 2rem 3rem ;
             max-height: inherit;
         }
-
-        .items.style3 .image {
-            width: 30%;
-        }
-
-        .items.style3 .content {
-            width: 70%;
-        }
-
     }
 
     @media screen and (max-width: 960px) {
         .items.style3 {
             max-height: 100vh;
-        }
-
-        .items.style3 .image {
-            width: 35%;
-        }
-
-        .items.style3 .content {
-            width: 65%;
         }
     }
 
@@ -892,7 +888,8 @@ p {
             background-color: rgba(0, 0, 0, 0.5);
             opacity: 0;
             padding: 2rem;
-            font-size: 0.8rem;
+            letter-spacing: -0.05em;
+            font-size: 0.9rem;
         }
 
             .gallery.style1 article .caption h2, .gallery.style1 article .caption h3, .gallery.style1 article .caption h4, .gallery.style1 article .caption h5, .gallery.style1 article .caption h6 {
@@ -920,6 +917,7 @@ p {
 
         .gallery.style1 article {
             width: 100%;
+            height: 33vh;
             /* padding: 1rem; */
         }
 
@@ -1179,6 +1177,7 @@ p {
         line-height: normal;
         text-align: center;
         font-size: 17px;
+        letter-spacing: -0.05em;
     }
 
     /* Change background color of buttons on hover */

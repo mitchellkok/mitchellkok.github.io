@@ -5,6 +5,7 @@
 			<meta charset="UTF-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 			<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 			<title>Mitchell's Photography</title>
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 		  </head>
@@ -30,8 +31,8 @@
 								While my main area of interest is landscape photography, I've since dipped my toes into a range of genres, from corporate events to weddings to commercial photography, and more!
 							</p>
 						</div>
-						<div class="image" style="object-position:bottom;">
-							<img src="https://drive.google.com/uc?export=view&id=1Na8N4MQSj-kNp3De7ohisOpahDROmgCR" alt="" style="object-position:bottom;"/>
+						<div class="image">
+							<img src="https://drive.google.com/uc?export=view&id=1Na8N4MQSj-kNp3De7ohisOpahDROmgCR" alt=""/>
 						</div>
 					</section>
 
@@ -104,7 +105,7 @@
 								</a>
 								<div class="caption">
 									<h3>Thailand</h3>
-									<p>Coming soon. Watch this space!</p>
+									<p>The Land of Smiles</p>
 									<section>
 										<a href="photog_pages/photog_th19.html" class="button">Enter</a>
 									</section>
@@ -117,7 +118,7 @@
 								</a>
 								<div class="caption">
 									<h3>Nepal</h3>
-									<p>Coming soon. Watch this space!</p>
+									<p>A Yam Between Two Stones</p>
 									<section>
 										<a href="photog_pages/photog_np19.html" class="button">Enter</a>
 									</section>
@@ -302,10 +303,36 @@
 
 							<article>
 								<div class="image">
+									<img src="https://drive.google.com/uc?export=view&id=163M9A_iLPDe0rK_ZxxLzGy1eGEer9zCe" alt="" class="position-center"/>
+								</div>
+								<div class="caption">
+									<h3>Yosemite in Medium Format</h3>
+									<p>Coming soon. Watch this space!</p>
+									<section>
+										<a href="photog_pages/photog_f-yosemite-portra400.html" class="button">Enter</a>
+									</section>
+								</div>
+							</article>
+
+							<article>
+								<div class="image">
+									<img src="https://drive.google.com/uc?export=view&id=1OPgEL_kPeHawzeiuNfJWmgiIYwiWotDn" alt="" class="position-top"/>
+								</div>
+								<div class="caption">
+									<h3>An Alaskan Cruise in 35mm</h3>
+									<p>Coming soon. Watch this space!</p>
+									<section>
+										<a href="photog_pages/photog_f-alaska-portra400.html" class="button">Enter</a>
+									</section>
+								</div>
+							</article>
+
+							<article>
+								<div class="image">
 									<img src="https://drive.google.com/uc?export=view&id=1TdqRDizFU791gRcuilWSrefDj51UZODk" alt="" class="position-center"/>
 								</div>
 								<div class="caption">
-									<h3>The Canadian Winter in 35mm</h3>
+									<h3>A Canadian Winter in 35mm</h3>
 									<p>Coming soon. Watch this space!</p>
 									<section>
 										<a href="photog_pages/photog_f-canwinter-portra400.html" class="button">Enter</a>
@@ -318,7 +345,7 @@
 									<img src="https://drive.google.com/uc?export=view&id=1Tws5chdjVKhPyixhT9M_TVj_PYkimzo5" alt="" class="position-center"/>
 								</div>
 								<div class="caption">
-									<h3>The Canadian Spring in 35mm</h3>
+									<h3>A Canadian Spring in 35mm</h3>
 									<p>Coming soon. Watch this space!</p>
 									<section>
 										<a href="photog_pages/photog_f-canspring-superia400.html" class="button">Enter</a>
@@ -445,6 +472,10 @@
 			if (!window.location.href.includes("#/")){
 				document.getElementById('ButtonA').click(); // Load first page by default
 			} else {
+				pageFromParams();
+			}
+
+			function pageFromParams() {
 				params = getHashParams();
 				letter = params[0].slice(-1);
 				openGallery("Gallery"+letter, "Button"+letter);
@@ -487,9 +518,7 @@
 
 			window.addEventListener('hashchange', function(){
 				// script to obtain url parameters, if any
-				params = getHashParams();
-				letter = params[0].slice(-1);
-				openGallery("Gallery"+letter, "Button"+letter);
+				pageFromParams();
 			});
 		</script>
 
