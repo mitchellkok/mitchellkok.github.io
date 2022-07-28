@@ -56,13 +56,13 @@
 
 					
 					<div class="tab">
-						<div id="ButtonA" class="tablinks helvetica" onclick="updateURL(event, 'GalleryA')">
+						<div id="ButtonA" class="tablinks helvetica" onclick="updateURL(event,'GalleryA','ButtonA')">
 							<span>Around the World</span>
 						</div>
-						<div id="ButtonB" class="tablinks helvetica" onclick="updateURL(event, 'GalleryB')">
+						<div id="ButtonB" class="tablinks helvetica" onclick="updateURL(event,'GalleryB','ButtonB')">
 							<span>Shot on Film</span>
 						</div>
-						<div id="ButtonC" class="tablinks helvetica" onclick="updateURL(event, 'GalleryC')">
+						<div id="ButtonC" class="tablinks helvetica" onclick="updateURL(event,'GalleryC','ButtonC')">
 							<span>Commissioned Work/Projects</span>
 						</div>
 					</div>
@@ -442,11 +442,17 @@
 
 			
 		<script>
-			document.getElementById('ButtonA').click(); // Load first page by default
+			if (!window.location.href.includes("#/")){
+				document.getElementById('ButtonA').click(); // Load first page by default
+			} else {
+				params = getHashParams();
+				letter = params[0].slice(-1);
+				openGallery("Gallery"+letter, "Button"+letter);
+			}
 
-			function updateURL(evt, galleryName) {
-				window.location.href = 'photog.html#/'	// Force a change in URL
+			function updateURL(evt, galleryName, buttonName) {
 				window.location.href = 'photog.html#/' + galleryName;
+				openGallery(galleryName, buttonName);
 			}
 
 			function openGallery(galleryName, buttonName) {
@@ -463,11 +469,8 @@
 				document.getElementById(buttonName).className += " active";
 			}
 
-			window.addEventListener('hashchange', function(){
-				// script to obtain url parameters, if any
-				params = [];
+			function getHashParams() {
 				docURL = window.location.href.replace(window.location.origin, '');
-
 				if (docURL.indexOf('#/') > -1) {
 					docURL = docURL.split('#/')[1];
 					if (docURL != '') {
@@ -477,10 +480,14 @@
 						}
 						// split the URL final string
 						params = docURL.split('/');
-						console.log(params);
+						return params;
 					}
 				}
+			}
 
+			window.addEventListener('hashchange', function(){
+				// script to obtain url parameters, if any
+				params = getHashParams();
 				letter = params[0].slice(-1);
 				openGallery("Gallery"+letter, "Button"+letter);
 			});
