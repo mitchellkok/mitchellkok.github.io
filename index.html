@@ -87,7 +87,7 @@
         }
 
         sliderB_position = imgArray[curIndex][1];
-        document.getElementById(sliderB).src = imgArray[curIndex][0];      // Set sliderB image
+        document.getElementById(sliderB).src = imgArray[curIndex][0].concat("?", Date.now());      // Set sliderB image
         document.getElementById(sliderB).className = "slider waiting ".concat(sliderB_position);  // Wait ready in background
         console.log("Waiting:", sliderB, document.getElementById(sliderB).src);
 
