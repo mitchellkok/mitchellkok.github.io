@@ -14,9 +14,12 @@
 
   <!-- Top Logo -->
 
-
   <!-- Wrapper -->
   <div class="with-background fit">
+    <div class="slideshow-container">
+      <img id="slider1" class="slider" src="/css/backgrounds/DSC07111.jpg"  style="width:100%">
+      <img id="slider2" class="slider fadeOut" src=""  style="width:100%">      
+    </div>
 
     <!-- Sections -->
     <section class="banner fullscreen text-align-left">
@@ -52,6 +55,50 @@
         </p>
     </footer>
   </div>
+
+  <script>
+    var imgArray = [
+      ['/css/backgrounds/MerlionPark.jpg', 'position-center'],
+      ['/css/backgrounds/WesternAustralia.jpg', 'position-center'],
+      ['/css/backgrounds/Alberta.jpg', 'position-bottom-left'],
+      ['/css/backgrounds/California.jpg', 'position-center'],
+      ['/css/backgrounds/PoonHill.jpg', 'position-center'],
+      ['/css/backgrounds/LindisPass.jpg', 'position-center'],
+    ],
+    curIndex = 0;
+    sliderNo = 1;
+    sliderA_position = "";
+    imgDuration = 10000;
+
+    function slideShow() {
+        if (sliderNo == 1) {
+          sliderA = 'slider1';
+          sliderB = 'slider2';
+          sliderNo = 0;
+        } else {
+          sliderA = 'slider2';
+          sliderB = 'slider1';
+          sliderNo = 1;
+        }
+
+        sliderB_position = imgArray[curIndex][1];
+        document.getElementById(sliderA).className = "slider fadeMid ".concat(sliderA_position);       // Half fade out sliderA
+        document.getElementById(sliderB).className = "slider fadeMid ".concat(sliderB_position);  // Half fade in sliderB
+        document.getElementById(sliderB).src = imgArray[curIndex][0];      // Set sliderB image
+
+        console.log("Fade In", sliderB, document.getElementById(sliderB).src)
+        console.log("Fade out", sliderA, document.getElementById(sliderA).src)
+        setTimeout(function() {
+            document.getElementById(sliderB).className = "slider ".concat(sliderB_position);      // Full fade in sliderB
+            document.getElementById(sliderA).className = "slider fadeOut ".concat(sliderA_position);
+        },301);
+
+        curIndex++; sliderA_position = sliderB_position;
+        if (curIndex == imgArray.length) { curIndex = 0; }
+        setTimeout(slideShow, imgDuration);
+    }
+    slideShow();
+  </script>
 
   </body>
 </html>
