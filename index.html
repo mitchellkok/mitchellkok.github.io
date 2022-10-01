@@ -83,17 +83,14 @@
 
         sliderB_position = imgArray[curIndex][1];
         document.getElementById(sliderB).src = imgArray[curIndex][0];      // Set sliderB image
+        document.getElementById(sliderB).className = "slider waiting ".concat(sliderA_position);  // Wait ready in background
+        
         setTimeout(function() {
-          document.getElementById(sliderB).className = "slider waiting ".concat(sliderA_position);  // Wait ready in background
+          document.getElementById(sliderA).className = "slider fadeOut ".concat(sliderA_position);  // Half fade out sliderA
+          document.getElementById(sliderB).className = "slider ".concat(sliderB_position);          // Half fade in sliderB
         }, 1000)
-
-        document.getElementById(sliderA).className = "slider fadeOut ".concat(sliderA_position);  // Half fade out sliderA
-        document.getElementById(sliderB).className = "slider ".concat(sliderB_position);          // Half fade in sliderB
-
         console.log("Fade In", sliderB, document.getElementById(sliderB).src)
         console.log("Fade out", sliderA, document.getElementById(sliderA).src)
-
-        
 
         curIndex++; sliderA_position = sliderB_position;
         if (curIndex == imgArray.length) { curIndex = 0; }
