@@ -68,7 +68,7 @@
     curIndex = 0;
     sliderNo = 1;
     sliderA_position = "";
-    imgDuration = 10000;
+    imgDuration = 9000;
 
     function slideShow() {
         if (sliderNo == 1) {
@@ -83,12 +83,17 @@
 
         sliderB_position = imgArray[curIndex][1];
         document.getElementById(sliderB).src = imgArray[curIndex][0];      // Set sliderB image
+        setTimeout(function() {
+          document.getElementById(sliderB).className = "slider waiting ".concat(sliderA_position);  // Wait ready in background
+        }, 1000)
 
         document.getElementById(sliderA).className = "slider fadeOut ".concat(sliderA_position);  // Half fade out sliderA
-        document.getElementById(sliderB).className = "slider ".concat(sliderB_position);  // Half fade in sliderB
+        document.getElementById(sliderB).className = "slider ".concat(sliderB_position);          // Half fade in sliderB
 
         console.log("Fade In", sliderB, document.getElementById(sliderB).src)
         console.log("Fade out", sliderA, document.getElementById(sliderA).src)
+
+        
 
         curIndex++; sliderA_position = sliderB_position;
         if (curIndex == imgArray.length) { curIndex = 0; }
