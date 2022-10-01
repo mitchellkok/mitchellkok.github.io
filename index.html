@@ -68,7 +68,7 @@
     curIndex = 0;
     sliderNo = 1;
     sliderA_position = "";
-    imgDuration = 9000;
+    imgDuration = 3000;
 
     function slideShow() {
         if (sliderNo == 1) {
@@ -83,18 +83,18 @@
 
         sliderB_position = imgArray[curIndex][1];
         document.getElementById(sliderB).src = imgArray[curIndex][0];      // Set sliderB image
-        document.getElementById(sliderB).className = "slider waiting ".concat(sliderA_position);  // Wait ready in background
+        document.getElementById(sliderB).className = "slider waiting ".concat(sliderB_position);  // Wait ready in background
+        console.log("Waiting:", sliderB, document.getElementById(sliderB).src);
         
-        setTimeout(function() {
-          document.getElementById(sliderA).className = "slider fadeOut ".concat(sliderA_position);  // Half fade out sliderA
-          document.getElementById(sliderB).className = "slider ".concat(sliderB_position);          // Half fade in sliderB
-        }, 1000)
-        console.log("Fade In", sliderB, document.getElementById(sliderB).src)
-        console.log("Fade out", sliderA, document.getElementById(sliderA).src)
+        document.getElementById(sliderA).className = "slider fadeOut ".concat(sliderA_position);  // Half fade out sliderA
+        document.getElementById(sliderB).className = "slider ".concat(sliderB_position);          // Half fade in sliderB
+        console.log("Fade In", sliderB, document.getElementById(sliderB).src);
+        console.log("Fade out", sliderA, document.getElementById(sliderA).src);
 
         curIndex++; sliderA_position = sliderB_position;
         if (curIndex == imgArray.length) { curIndex = 0; }
         setTimeout(slideShow, imgDuration);
+
     }
     slideShow();
   </script>
