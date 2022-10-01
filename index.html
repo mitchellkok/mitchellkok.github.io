@@ -57,20 +57,25 @@
   </div>
 
   <script>
+
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
     var imgArray = [
       ['/css/backgrounds/MerlionPark.jpg', 'position-center'],
       ['/css/backgrounds/WesternAustralia.jpg', 'position-center'],
       ['/css/backgrounds/Alberta.jpg', 'position-bottom-left'],
       ['/css/backgrounds/California.jpg', 'position-center'],
       ['/css/backgrounds/PoonHill.jpg', 'position-center'],
-      ['/css/backgrounds/LindisPass.jpg', 'position-center'],
+      // ['/css/backgrounds/LindisPass.jpg', 'position-center'],
     ],
     curIndex = 1;
     sliderNo = 1;
     sliderA_position = "";
-    imgDuration = 10000;
+    imgDuration = 8000;
 
-    function slideShow() {
+    async function slideShow() {
         if (sliderNo == 1) {
           sliderA = 'slider1';
           sliderB = 'slider2';
@@ -86,13 +91,14 @@
         document.getElementById(sliderB).className = "slider waiting ".concat(sliderB_position);  // Wait ready in background
         console.log("Waiting:", sliderB, document.getElementById(sliderB).src);
 
-        setTimeout(function() {
-          console.log("Fade In", sliderB, document.getElementById(sliderB).src);
-          console.log("Fade out", sliderA, document.getElementById(sliderA).src);
-        }, 2000)
+        console.log("Fade In:", sliderB, document.getElementById(sliderB).src);
+        console.log("Fade out:", sliderA, document.getElementById(sliderA).src);
         document.getElementById(sliderA).className = "slider fadeOut ".concat(sliderA_position);  // Half fade out sliderA
+        
+
+        await sleep(imgDuration/2)
         document.getElementById(sliderB).className = "slider ".concat(sliderB_position);          // Half fade in sliderB
-                        
+        
         curIndex++; sliderA_position = sliderB_position;
         if (curIndex == imgArray.length) { curIndex = 0; }
     }
