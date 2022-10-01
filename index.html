@@ -17,7 +17,7 @@
   <!-- Wrapper -->
   <div class="with-background fit">
     <div class="slideshow-container">
-      <img id="slider1" class="slider" src="/css/backgrounds/DSC07111.jpg"  style="width:100%">
+      <img id="slider1" class="slider" src="/css/backgrounds/MerlionPark.jpg"  style="width:100%">
       <img id="slider2" class="slider fadeOut" src=""  style="width:100%">      
     </div>
 
@@ -65,10 +65,10 @@
       ['/css/backgrounds/PoonHill.jpg', 'position-center'],
       ['/css/backgrounds/LindisPass.jpg', 'position-center'],
     ],
-    curIndex = 0;
+    curIndex = 1;
     sliderNo = 1;
     sliderA_position = "";
-    imgDuration = 3000;
+    imgDuration = 10000;
 
     function slideShow() {
         if (sliderNo == 1) {
@@ -85,18 +85,18 @@
         document.getElementById(sliderB).src = imgArray[curIndex][0];      // Set sliderB image
         document.getElementById(sliderB).className = "slider waiting ".concat(sliderB_position);  // Wait ready in background
         console.log("Waiting:", sliderB, document.getElementById(sliderB).src);
-        
+
+        setTimeout(function() {
+          console.log("Fade In", sliderB, document.getElementById(sliderB).src);
+          console.log("Fade out", sliderA, document.getElementById(sliderA).src);
+        }, 2000)
         document.getElementById(sliderA).className = "slider fadeOut ".concat(sliderA_position);  // Half fade out sliderA
         document.getElementById(sliderB).className = "slider ".concat(sliderB_position);          // Half fade in sliderB
-        console.log("Fade In", sliderB, document.getElementById(sliderB).src);
-        console.log("Fade out", sliderA, document.getElementById(sliderA).src);
-
+                        
         curIndex++; sliderA_position = sliderB_position;
         if (curIndex == imgArray.length) { curIndex = 0; }
-        setTimeout(slideShow, imgDuration);
-
     }
-    slideShow();
+    setInterval(slideShow,imgDuration);
   </script>
 
   </body>
