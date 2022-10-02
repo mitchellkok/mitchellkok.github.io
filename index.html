@@ -62,6 +62,10 @@
         return new Promise(resolve => setTimeout(resolve, ms));
     }
 
+    function init_images() {
+
+    }
+
     var imgArray = [
       ['/css/backgrounds/MerlionPark.jpg', 'position-center'],
       ['/css/backgrounds/WesternAustralia.jpg', 'position-center'],
@@ -96,12 +100,20 @@
         document.getElementById(sliderA).className = "slider fadeOut ".concat(sliderA_position);  // Half fade out sliderA
         
 
-        await sleep(imgDuration/2)
+        await sleep(imgDuration/2);
+        console.log("Front:", sliderB, document.getElementById(sliderB).src);
         document.getElementById(sliderB).className = "slider ".concat(sliderB_position);          // Half fade in sliderB
+        // setTimeout(function() {
+        //     console.log("Front:", sliderB, document.getElementById(sliderB).src);
+        //     document.getElementById(sliderB).className = "slider ".concat(sliderB_position);          // Half fade in sliderB
+        //   }, imgDuration/2
+        // )
         
         curIndex++; sliderA_position = sliderB_position;
         if (curIndex == imgArray.length) { curIndex = 0; }
     }
+
+    init_images();
     setInterval(slideShow,imgDuration);
   </script>
 
