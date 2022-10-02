@@ -22,15 +22,14 @@
     </div>
 
     <!-- Sections -->
-    <section class="banner fullscreen text-align-left">
-      <div class="content">
+    <div class="banner">
+      <div class="banner-content text-align-left vertically-centered-up">
         <h1>Hello!</h1>
         <p class="major">
           My name is Mitchell and I'm a third-year Computer Engineering student with NTU's  
             <a href="https://www.ntu.edu.sg/admissions/undergraduate/premier-scholar-programmes/renaissance-engineering-programme/about-us" target="_blank" class="main">Renaissance Engineering Programme</a>,
             and this is my website!
           <br>Beyond engineering, I'm also an avid photographer. Follow the links below to find out more!
-          <br>
         </p>
 
         <section>
@@ -40,19 +39,21 @@
         </section>
         
       </div>
-    </section>
+    </div>
   </div>
 
     <!-- Footer -->
     <footer class="bottomnav bottomnavtext fix">
-        <a href="https://www.instagram.com/thetakers_photos/" target="_blank"><i class="fa fa-instagram icon"></i></a>
-        <a href="https://www.linkedin.com/in/mitchell-kok/" target="_blank"><i class="fa fa-linkedin icon"></i></a>
-        <a href="https://github.com/mitchellkok" target="_blank"><i class="fa fa-github icon"></i></a> 
+      <div class="vertically-centered" style="width:100vw; text-align:center;">
+        <a class="bottomnav icon" href="https://www.instagram.com/thetakers_photos/" target="_blank"><i class="fa fa-instagram icon"></i></a>
+        <a class="bottomnav icon" href="https://www.linkedin.com/in/mitchell-kok/" target="_blank"><i class="fa fa-linkedin icon"></i></a>
+        <a class="bottomnav icon" href="https://github.com/mitchellkok" target="_blank"><i class="fa fa-github icon"></i></a> 
         <p class="bottomnavtext">
-          Powered by <a href="https://github.com/mitchellkok/mitchellkok.github.io" class="main" style="font-size: 14px;">GitHub.io</a>!
+          Powered by <a href="https://github.com/mitchellkok/mitchellkok.github.io" class="main bottomnavtext">GitHub.io</a>!
           <br>
-				  <a href="contact.html" class="main bottomnavtext" style="font-size: 14px;">Contact Me / About</a>
+				  <a href="contact.html" class="main bottomnavtext">Contact Me / About</a>
         </p>
+      </div>
     </footer>
   </div>
 
@@ -60,10 +61,6 @@
 
     function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
-    }
-
-    function init_images() {
-
     }
 
     var imgArray = [
@@ -108,7 +105,6 @@
         if (curIndex == imgArray.length) { curIndex = 0; }
     }
 
-    init_images();
     setInterval(slideShow,imgDuration);
   </script>
 
