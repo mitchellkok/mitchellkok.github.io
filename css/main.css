@@ -87,10 +87,11 @@ section {
     color: #f2f2f2;
     background-color: #333;
     width:100%;
+    height: 120px;
+    overflow: hidden;
 }
 
 .bottomnav.fix {
-    height: 120px;
     position: relative;
 }
 
@@ -124,9 +125,8 @@ section {
 }
 
     @media screen and (max-height: 480px) {
-        .bottomnav.fix {
+        .bottomnav {
             height: 70px;
-            position: relative;
         }
         
         .bottomnav.icon {
