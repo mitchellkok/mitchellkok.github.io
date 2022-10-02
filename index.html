@@ -95,12 +95,11 @@
         document.getElementById(sliderB).className = "slider waiting ".concat(sliderB_position);  // Wait ready in background
         console.log("Waiting:", sliderB, document.getElementById(sliderB).src);
 
-        console.log("Fade In:", sliderB, document.getElementById(sliderB).src);
+        await sleep(imgDuration/4);
         console.log("Fade out:", sliderA, document.getElementById(sliderA).src);
         document.getElementById(sliderA).className = "slider fadeOut ".concat(sliderA_position);  // Half fade out sliderA
         
-
-        await sleep(imgDuration/2);
+        await sleep(imgDuration/4);
         console.log("Front:", sliderB, document.getElementById(sliderB).src);
         document.getElementById(sliderB).className = "slider ".concat(sliderB_position);          // Half fade in sliderB
         // setTimeout(function() {
