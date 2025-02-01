@@ -701,6 +701,7 @@ p {
 
     .wrapper.style1 > .outer {
         position: relative;
+        padding: 10%;
         margin: 0 auto;
         max-width: 100%;
         width: 70vw;
@@ -722,7 +723,7 @@ p {
     @media screen and (max-width: 1920px) {
 
         .wrapper.style1 > .outer {
-            top: 2.5rem;
+            /* top: 2.5rem; */
             padding: 4rem 4rem 4rem 4rem ;
         }
 
